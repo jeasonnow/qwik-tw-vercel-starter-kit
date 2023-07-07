@@ -9,6 +9,9 @@ export default defineConfig(() => {
       alias: {
         "node-fetch" : "isomorphic-fetch",
       }
+    }, 
+    define: {
+      self: 'globalThis',
     },
     plugins: [qwikCity(), qwikVite(), tsconfigPaths()],
     preview: {
